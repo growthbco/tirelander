@@ -1,0 +1,66 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+    <meta name="description" content="24/7 commercial truck tire service and heavy equipment roadside assistance in the tri-state area. On-site in 30 minutes or less. Call (347) 668-5874." />
+    <title>{title}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#ED1C24',
+                dark: '#0F172A',
+                gray: '#F3F4F6',
+                accent: '#FFD700'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script is:inline>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      ::-webkit-scrollbar-thumb { background: #ED1C24; border-radius: 4px; }
+      .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      .text-shadow-strong { text-shadow: 3px 3px 6px rgba(0,0,0,0.8); }
+      .clip-slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+
+      /* Mobile nav overlay */
+      .mobile-nav { transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+      .mobile-nav.open { transform: translateX(0); }
+
+      /* Smooth scroll */
+      html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+      /* Tap highlight removal for mobile */
+      button, a { -webkit-tap-highlight-color: transparent; }
+
+      /* Safe area for notched phones */
+      body { padding-env: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-slate-800 bg-white">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,502 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Truck Tire Service On The Go - Commercial & Heavy Equipment Roadside Assistance">
+  <!-- Sticky Header -->
+  <header id="header" class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 sm:h-20">
+        <!-- Logo Area -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <div class="bg-brand-red text-white p-1.5 sm:p-2 rounded-lg">
+            <i class="fa-solid fa-truck-fast text-xl sm:text-2xl"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-black text-sm sm:text-xl uppercase leading-none text-brand-dark tracking-tighter">Truck Tire Service</span>
+            <span class="text-brand-red font-bold text-[10px] sm:text-sm uppercase tracking-widest">On The Go</span>
+          </div>
+        </div>
+        <!-- Desktop Nav & CTA -->
+        <div class="hidden md:flex items-center gap-8">
+          <nav class="flex items-center gap-6">
+            <a href="#services" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Services</a>
+            <a href="#equipment" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Equipment</a>
+            <a href="#testimonials" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Reviews</a>
+          </nav>
+          <div class="flex flex-col items-end">
+            <span class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Emergency 24/7</span>
+            <a href="tel:+13476685874" class="text-brand-red font-black text-xl hover:text-red-700 transition-colors">
+              <i class="fa-solid fa-phone mr-2"></i>(347) 668-5874
+            </a>
+          </div>
+          <a href="tel:+13476685874" class="bg-brand-red hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-red-500/30 transition-all hover:-translate-y-0.5 transform">
+            Get Help Now
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden text-brand-dark text-2xl p-2 -mr-2" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-[60] bg-brand-dark/95 backdrop-blur-md flex flex-col md:hidden">
+    <div class="flex justify-between items-center px-4 h-16">
+      <div class="flex items-center gap-2">
+        <div class="bg-brand-red text-white p-1.5 rounded-lg">
+          <i class="fa-solid fa-truck-fast text-xl"></i>
+        </div>
+        <span class="font-display font-black text-sm uppercase text-white tracking-tighter">Truck Tire Service</span>
+      </div>
+      <button id="menu-close" class="text-white text-2xl p-2 -mr-2" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center justify-center flex-1 gap-6">
+      <a href="#services" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Services</a>
+      <a href="#equipment" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Equipment</a>
+      <a href="#testimonials" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Reviews</a>
+      <a href="#emergency-cta" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Contact</a>
+      <div class="mt-6 pt-6 border-t border-white/20 text-center">
+        <p class="text-white/60 text-sm uppercase tracking-wider mb-2">24/7 Emergency</p>
+        <a href="tel:+13476685874" class="text-brand-red font-black text-3xl">(347) 668-5874</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-16 sm:pt-20 min-h-[100svh] sm:min-h-[800px] flex items-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40 sm:to-transparent z-10"></div>
+      <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/51b799ee5c-18e78048f8d4e409ca47.png" alt="Commercial truck tire being changed on the roadside by a professional mechanic" />
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-0">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+        <!-- Hero Content -->
+        <div class="text-white space-y-4 sm:space-y-6">
+          <div class="inline-flex items-center gap-2 bg-brand-red/90 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider backdrop-blur-sm border border-red-400/30">
+            <i class="fa-solid fa-clock"></i> On Site in 30 Min or Less
+          </div>
+
+          <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl uppercase leading-[1.1] text-shadow-strong">
+            Heavy Duty <span class="text-brand-red">Truck & Equipment</span> Tire Service
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 max-w-xl font-light leading-relaxed">
+            24/7 mobile tire service for commercial trucks, dump trucks, bobcats, backhoe loaders, skid steers, and caterpillar equipment. We come to your job site or the roadside.
+          </p>
+          <div class="space-y-2.5 sm:space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-brand-red text-lg sm:text-xl"></i>
+              <span class="font-medium text-sm sm:text-base">Commercial & Heavy Equipment Specialists</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-brand-red text-lg sm:text-xl"></i>
+              <span class="font-medium text-sm sm:text-base">24/7 Emergency Response — No Membership</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-brand-red text-lg sm:text-xl"></i>
+              <span class="font-medium text-sm sm:text-base">Serving Within a 250-Mile Radius</span>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
+            <a href="tel:+13476685874" class="bg-brand-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-black text-lg shadow-xl shadow-red-600/20 transition-all hover:-translate-y-1 text-center flex items-center justify-center gap-3 uppercase tracking-wide min-h-[56px]">
+              <i class="fa-solid fa-phone-volume animate-pulse"></i> Call Now
+            </a>
+            <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-bold text-lg transition-all text-center uppercase tracking-wide min-h-[56px] flex items-center justify-center">
+              View Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Floating Card / Visual Element -->
+        <div class="hidden lg:flex justify-end relative">
+          <div class="relative w-80 h-80 bg-white rounded-full flex items-center justify-center border-8 border-brand-red/20 shadow-[0_0_60px_rgba(237,28,36,0.3)]">
+            <div class="absolute inset-2 border-4 border-dashed border-brand-red rounded-full animate-spin" style="animation-duration: 20s;"></div>
+            <div class="text-center z-10 p-8 bg-brand-red rounded-full h-64 w-64 flex flex-col items-center justify-center shadow-inner">
+              <i class="fa-solid fa-truck-front text-5xl text-white mb-2"></i>
+              <div class="font-display font-black text-white text-3xl leading-none">24/7</div>
+              <div class="font-bold text-white/90 text-sm uppercase mt-1">Heavy Duty</div>
+              <div class="font-black text-white text-xl uppercase mt-1">Tire Service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Wave Divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="fill-white w-full h-auto block">
+        <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trusted Intro Section -->
+  <section id="intro" class="py-12 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span class="text-brand-red font-bold tracking-widest uppercase text-xs sm:text-sm">Why Fleet Managers & Contractors Choose Us</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl lg:text-5xl mt-2 mb-4 sm:mb-6 text-brand-dark uppercase">
+          Built For <span class="text-brand-red">Heavy Duty</span> Work
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+          When your truck or heavy equipment goes down, every minute costs money. We specialize in commercial and industrial tire service — arriving on-site in 30 minutes or less across the tri-state area.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+        <!-- Card 1 -->
+        <div class="group relative bg-brand-red rounded-2xl p-6 sm:p-8 lg:p-12 text-white overflow-hidden shadow-2xl hover:shadow-red-500/40 transition-all duration-300 hover:-translate-y-2">
+          <div class="absolute top-0 right-0 p-6 sm:p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fa-solid fa-stopwatch text-7xl sm:text-9xl"></i>
+          </div>
+          <div class="relative z-10">
+            <h3 class="font-display font-black text-xl sm:text-2xl lg:text-3xl uppercase mb-3 sm:mb-4">On-Site In 30 Mins Or Less</h3>
+            <div class="h-1 w-20 bg-white mb-4 sm:mb-6"></div>
+            <p class="text-white/90 mb-6 sm:mb-8 text-base sm:text-lg font-medium">
+              Your truck broke down or equipment blew a tire on the job site? Our crews roll out fast with the tools and tires to handle any commercial or heavy-duty vehicle.
+            </p>
+            <a href="tel:+13476685874" class="bg-white text-brand-red px-6 sm:px-8 py-3 rounded-lg font-black uppercase text-sm tracking-wider hover:bg-slate-100 transition-colors shadow-lg inline-flex items-center gap-2 min-h-[48px]">
+              Call Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="group relative bg-slate-900 rounded-2xl p-6 sm:p-8 lg:p-12 text-white overflow-hidden shadow-2xl hover:shadow-slate-500/40 transition-all duration-300 hover:-translate-y-2">
+          <div class="absolute top-0 right-0 p-6 sm:p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+            <i class="fa-solid fa-truck-front text-7xl sm:text-9xl"></i>
+          </div>
+          <div class="relative z-10">
+            <h3 class="font-display font-black text-xl sm:text-2xl lg:text-3xl uppercase mb-3 sm:mb-4">No Membership Required</h3>
+            <div class="h-1 w-20 bg-brand-red mb-4 sm:mb-6"></div>
+            <p class="text-slate-300 mb-6 sm:mb-8 text-base sm:text-lg font-medium">
+              Whether it's a one-time blowout or you need an ongoing fleet partner, we're ready to help right now. No contracts, no sign-ups — just call and we show up.
+            </p>
+            <a href="tel:+13476685874" class="bg-brand-red text-white px-6 sm:px-8 py-3 rounded-lg font-black uppercase text-sm tracking-wider hover:bg-red-700 transition-colors shadow-lg inline-flex items-center gap-2 min-h-[48px]">
+              Call Us Today <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-12 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 sm:mb-16">
+        <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-brand-dark uppercase mb-4">Our Services</h2>
+        <div class="h-1.5 w-24 bg-brand-red mx-auto rounded-full"></div>
+        <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">Heavy-duty tire service and roadside assistance for commercial vehicles and construction equipment.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <!-- Service 1 - Featured -->
+        <div class="bg-brand-red rounded-xl shadow-lg p-6 sm:p-8 text-center sm:col-span-2 lg:col-span-1 lg:row-span-2 flex flex-col justify-center group cursor-pointer hover:shadow-2xl transition-all">
+          <div class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <i class="fa-solid fa-truck-monster text-4xl text-white"></i>
+          </div>
+          <h3 class="font-display font-black text-xl sm:text-2xl uppercase text-white mb-3">Commercial Truck Tires</h3>
+          <p class="text-white/90 text-sm sm:text-base mb-6">Our core specialty. On-site tire changes, repairs, and replacements for semi-trucks, dump trucks, box trucks, and all commercial vehicles.</p>
+          <a href="tel:+13476685874" class="bg-white text-brand-red px-6 py-3 rounded-lg font-black uppercase text-sm tracking-wider hover:bg-slate-100 transition-colors shadow-lg inline-flex items-center gap-2 mx-auto min-h-[48px]">
+            Call For Service <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer border-b-4 border-transparent hover:border-brand-red">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-red transition-colors duration-300">
+            <i class="fa-solid fa-gears text-2xl sm:text-3xl text-brand-red group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="font-display font-black text-base sm:text-lg uppercase text-slate-800 mb-2">Heavy Equipment Tires</h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Bobcats, backhoe loaders, skid steers, caterpillar machines, and all heavy construction equipment.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer border-b-4 border-transparent hover:border-brand-red">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-red transition-colors duration-300">
+            <i class="fa-solid fa-car-battery text-2xl sm:text-3xl text-brand-red group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="font-display font-black text-base sm:text-lg uppercase text-slate-800 mb-2">Battery Delivery & Install</h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Dead battery? We deliver and install commercial-grade replacements on-site — trucks and equipment.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer border-b-4 border-transparent hover:border-brand-red">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-red transition-colors duration-300">
+            <i class="fa-solid fa-gas-pump text-2xl sm:text-3xl text-brand-red group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="font-display font-black text-base sm:text-lg uppercase text-slate-800 mb-2">Fuel Delivery</h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Diesel and gas delivery direct to your truck or job site. Don't lose time driving to a station.</p>
+        </div>
+        <!-- Service 5 -->
+        <div class="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer border-b-4 border-transparent hover:border-brand-red">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-red transition-colors duration-300">
+            <i class="fa-solid fa-bolt text-2xl sm:text-3xl text-brand-red group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="font-display font-black text-base sm:text-lg uppercase text-slate-800 mb-2">Jump Starts</h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Heavy-duty jump start service for trucks and equipment that need serious power to get moving.</p>
+        </div>
+        <!-- Service 6 -->
+        <div class="bg-white rounded-xl shadow-lg p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 group cursor-pointer border-b-4 border-transparent hover:border-brand-red">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto bg-red-50 rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-red transition-colors duration-300">
+            <i class="fa-solid fa-key text-2xl sm:text-3xl text-brand-red group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="font-display font-black text-base sm:text-lg uppercase text-slate-800 mb-2">Lockout Service</h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Locked out of your cab? Safe and damage-free entry to get you back behind the wheel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment We Service -->
+  <section id="equipment" class="py-12 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 sm:mb-16">
+        <span class="text-brand-red font-bold tracking-widest uppercase text-xs sm:text-sm">What We Work On</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl lg:text-5xl mt-2 mb-4 text-brand-dark uppercase">Equipment We Service</h2>
+        <div class="h-1.5 w-24 bg-brand-red mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-truck-moving text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Dump Trucks</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-truck-front text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Semi Trucks</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-tractor text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Bobcats</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-snowplow text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Backhoe Loaders</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-gears text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Skid Steers</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 sm:p-6 text-center border border-slate-100 hover:border-brand-red/30 hover:shadow-lg transition-all">
+          <i class="fa-solid fa-industry text-3xl sm:text-4xl text-brand-red mb-3"></i>
+          <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">Caterpillar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency CTA Strip -->
+  <section id="emergency-cta" class="bg-brand-red relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 items-center">
+
+      <div class="p-8 sm:p-16 lg:p-20 relative z-10 text-white">
+        <h2 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl uppercase leading-none mb-4 sm:mb-6">
+          Truck Down? <br />We're On <br />Our Way.
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg mb-6 sm:mb-8 max-w-md">
+          Don't lose money sitting on the side of the road or waiting at the job site. Our heavy-duty crew deploys immediately with the right tires and tools.
+        </p>
+        <a href="tel:+13476685874" class="bg-white text-brand-red hover:bg-slate-100 px-8 py-4 rounded-lg font-black text-lg uppercase shadow-xl transition-transform hover:scale-105 inline-flex items-center gap-3 min-h-[56px]">
+          <i class="fa-solid fa-phone-flip animate-bounce"></i> (347) 668-5874
+        </a>
+      </div>
+      <div class="relative h-48 sm:h-64 lg:h-full min-h-[300px] lg:min-h-[400px]">
+        <div class="absolute inset-0 lg:-ml-20 bg-brand-red lg:skew-x-[-12deg] z-0 hidden lg:block"></div>
+        <div class="absolute inset-0 w-full h-full lg:clip-slant">
+          <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4169bd7689-b92b8749ac1159cebc91.png" alt="Truck tire service team working on a commercial vehicle at night" />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-red/50 to-transparent lg:hidden"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-12 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 sm:mb-16">
+        <h2 class="font-display font-black text-2xl sm:text-4xl text-brand-dark uppercase">What Our Clients Say</h2>
+        <div class="h-1 w-20 bg-brand-red mx-auto mt-4"></div>
+      </div>
+      <!-- Mobile: horizontal scroll, Desktop: grid -->
+      <div class="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:pb-0">
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+          <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
+          <div class="relative z-10">
+            <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Saved Our Job Site!</h4>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Our dump truck blew a tire on the BQE. They had a crew out in 25 minutes and got us rolling again. Absolute lifesavers."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
+              <div>
+                <p class="font-bold text-sm text-slate-800">Mike R.</p>
+                <p class="text-xs text-slate-500">Construction Foreman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+          <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
+          <div class="relative z-10">
+            <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Top-Notch Fleet Service!</h4>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"We run a fleet of 12 trucks and these guys are our go-to. Fast, fair pricing, and they always have the right tire in stock."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
+              <div>
+                <p class="font-bold text-sm text-slate-800">Marcus T.</p>
+                <p class="text-xs text-slate-500">Fleet Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+          <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
+          <div class="relative z-10">
+            <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Bobcat Fixed Fast!</h4>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Skid steer tire went flat in the middle of a demolition job. They came to the site and handled it. We didn't lose the whole day."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
+              <div>
+                <p class="font-bold text-sm text-slate-800">Sarah K.</p>
+                <p class="text-xs text-slate-500">Site Supervisor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+          <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
+          <div class="relative z-10">
+            <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">3AM Call, No Problem!</h4>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Had a blowout on the NJ Turnpike at 3am with a full load. Called these guys and they had me back on the road before sunrise."</p>
+            <div class="flex items-center gap-3">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
+              <div>
+                <p class="font-bold text-sm text-slate-800">David R.</p>
+                <p class="text-xs text-slate-500">Long-Haul Trucker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-slate-900 text-white pt-12 sm:pt-16 pb-24 sm:pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+        <!-- Company Info -->
+        <div class="col-span-2 sm:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-brand-red text-white p-2 rounded-lg">
+              <i class="fa-solid fa-truck-fast text-xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display font-black text-base uppercase leading-none">Truck Tire Service</span>
+              <span class="text-brand-red font-bold text-xs uppercase tracking-widest">On The Go</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">Heavy-duty commercial truck and equipment tire service across the tri-state area. 24/7 emergency response within a 250-mile radius.</p>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-display font-bold text-sm sm:text-lg uppercase mb-3 sm:mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li><a href="#" class="hover:text-brand-red transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-brand-red transition-colors">Services</a></li>
+            <li><a href="#equipment" class="hover:text-brand-red transition-colors">Equipment</a></li>
+            <li><a href="#testimonials" class="hover:text-brand-red transition-colors">Reviews</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div>
+          <h3 class="font-display font-bold text-sm sm:text-lg uppercase mb-3 sm:mb-4">Our Services</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Commercial Truck Tires</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Heavy Equipment Tires</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Battery Delivery</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Fuel Delivery</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Jump Starts</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red text-xs"></i> Lockout Service</li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="col-span-2 sm:col-span-1">
+          <h3 class="font-display font-bold text-sm sm:text-lg uppercase mb-3 sm:mb-4">Contact Us</h3>
+          <ul class="space-y-3 text-slate-400 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-brand-red mt-1"></i>
+              <div>
+                <p class="font-semibold text-white">24/7 Emergency</p>
+                <a href="tel:+13476685874" class="hover:text-brand-red transition-colors">(347) 668-5874</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-brand-red mt-1"></i>
+              <a href="mailto:help@trucktireservice.com" class="hover:text-brand-red transition-colors">help@trucktireservice.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-brand-red mt-1"></i>
+              <span>Serving NY, NJ, New Rochelle, Stamford, Long Island, Staten Island & Brooklyn</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-500 text-xs sm:text-sm text-center md:text-left">&copy; 2025 Truck Tire Service On The Go. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-t border-white/10 p-3 sm:hidden safe-area-bottom">
+    <a href="tel:+13476685874" class="flex items-center justify-center gap-3 bg-brand-red hover:bg-red-700 text-white py-3.5 rounded-xl font-black text-lg uppercase tracking-wide shadow-lg shadow-red-600/30 min-h-[52px]">
+      <i class="fa-solid fa-phone-volume animate-pulse"></i> Call (347) 668-5874
+    </a>
+  </div>
+
+  <!-- Mobile Nav & Smooth Scroll Script -->
+  <script is:inline>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggle && menuClose && mobileNav) {
+      menuToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+      menuClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+      // Close on link click
+      mobileNav.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => mobileNav.classList.remove('open'));
+      });
+    }
+  </script>
+</Layout>
