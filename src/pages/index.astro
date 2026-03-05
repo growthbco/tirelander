@@ -337,76 +337,64 @@ import Layout from "../layouts/Layout.astro";
         <div class="h-1 w-20 bg-brand-red mx-auto mt-4"></div>
       </div>
       <!-- Mobile: horizontal scroll, Desktop: grid -->
-      <div class="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:pb-0">
+      <div class="flex gap-4 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:pb-0 items-stretch">
         <!-- Testimonial 1 -->
-        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink flex flex-col">
           <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
-          <div class="relative z-10">
+          <div class="relative z-10 flex flex-col flex-1">
             <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Saved Our Job Site!</h4>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Our dump truck blew a tire on the BQE. They had a crew out in 25 minutes and got us rolling again. Absolute lifesavers."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
-              <div>
-                <p class="font-bold text-sm text-slate-800">Mike R.</p>
-                <p class="text-xs text-slate-500">Construction Foreman</p>
-              </div>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1">"Our dump truck blew a tire on the BQE. They had a crew out in 25 minutes and got us rolling again. Absolute lifesavers."</p>
+            <div class="mt-auto pt-4 border-t border-slate-200">
+              <p class="font-bold text-sm text-slate-800">Mike R.</p>
+              <p class="text-xs text-slate-500">Construction Foreman</p>
             </div>
           </div>
         </div>
         <!-- Testimonial 2 -->
-        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink flex flex-col">
           <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
-          <div class="relative z-10">
+          <div class="relative z-10 flex flex-col flex-1">
             <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Top-Notch Fleet Service!</h4>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"We run a fleet of 12 trucks and these guys are our go-to. Fast, fair pricing, and they always have the right tire in stock."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
-              <div>
-                <p class="font-bold text-sm text-slate-800">Marcus T.</p>
-                <p class="text-xs text-slate-500">Fleet Manager</p>
-              </div>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1">"We run a fleet of 12 trucks and these guys are our go-to. Fast, fair pricing, and they always have the right tire in stock."</p>
+            <div class="mt-auto pt-4 border-t border-slate-200">
+              <p class="font-bold text-sm text-slate-800">Marcus T.</p>
+              <p class="text-xs text-slate-500">Fleet Manager</p>
             </div>
           </div>
         </div>
         <!-- Testimonial 3 -->
-        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink flex flex-col">
           <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
-          <div class="relative z-10">
+          <div class="relative z-10 flex flex-col flex-1">
             <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">Bobcat Fixed Fast!</h4>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Skid steer tire went flat in the middle of a demolition job. They came to the site and handled it. We didn't lose the whole day."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
-              <div>
-                <p class="font-bold text-sm text-slate-800">Sarah K.</p>
-                <p class="text-xs text-slate-500">Site Supervisor</p>
-              </div>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1">"Skid steer tire went flat in the middle of a demolition job. They came to the site and handled it. We didn't lose the whole day."</p>
+            <div class="mt-auto pt-4 border-t border-slate-200">
+              <p class="font-bold text-sm text-slate-800">Sarah K.</p>
+              <p class="text-xs text-slate-500">Site Supervisor</p>
             </div>
           </div>
         </div>
         <!-- Testimonial 4 -->
-        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink">
+        <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm relative min-w-[280px] sm:min-w-0 snap-center flex-shrink-0 sm:flex-shrink flex flex-col">
           <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-brand-red/20 absolute top-4 sm:top-6 left-4 sm:left-6"></i>
-          <div class="relative z-10">
+          <div class="relative z-10 flex flex-col flex-1">
             <div class="flex text-yellow-400 mb-3 sm:mb-4 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <h4 class="font-bold text-base sm:text-lg mb-2 sm:mb-3">3AM Call, No Problem!</h4>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">"Had a blowout on the NJ Turnpike at 3am with a full load. Called these guys and they had me back on the road before sunrise."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" class="w-10 h-10 rounded-full object-cover" alt="User" />
-              <div>
-                <p class="font-bold text-sm text-slate-800">David R.</p>
-                <p class="text-xs text-slate-500">Long-Haul Trucker</p>
-              </div>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed flex-1">"Had a blowout on the NJ Turnpike at 3am with a full load. Called these guys and they had me back on the road before sunrise."</p>
+            <div class="mt-auto pt-4 border-t border-slate-200">
+              <p class="font-bold text-sm text-slate-800">David R.</p>
+              <p class="text-xs text-slate-500">Long-Haul Trucker</p>
             </div>
           </div>
         </div>
