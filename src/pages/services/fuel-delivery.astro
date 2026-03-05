@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "Diesel and gasoline delivery direct to your truck or job site",
+  "No need to disconnect trailers or transport equipment to a station",
+  "Available 24/7 — including overnight and holiday delivery",
+  "Fast 30-minute response time across the tri-state area",
+  "Competitive fuel pricing with no hidden delivery surcharges",
+  "Bulk delivery available for construction sites and fleet operations",
+];
+
+const faqs = [
+  { q: "Do you deliver diesel or gas?", a: "Both. We deliver diesel and gasoline to your location. Just tell us what you need and how much when you call." },
+  { q: "How fast can you deliver fuel?", a: "We typically arrive within 30 minutes in our primary service area. We give you an exact ETA when you call." },
+  { q: "Is there a minimum delivery amount?", a: "Call us at (347) 668-5874 and we'll work with you. Whether you need enough to get to a station or a full tank, we can help." },
+  { q: "Can you deliver to a construction site?", a: "Absolutely. Job site fuel delivery is one of our specialties. We deliver to wherever your trucks and equipment are." },
+  { q: "What's the cost for fuel delivery?", a: "You pay for the fuel plus a service fee. We give you the full price before we dispatch so there are no surprises." },
+];
+
+const relatedServices = [
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Battery Delivery", href: "/services/battery-delivery", icon: "fa-solid fa-car-battery" },
+  { name: "Jump Starts", href: "/services/jump-starts", icon: "fa-solid fa-bolt" },
+  { name: "Tire Pressure Service", href: "/services/tire-pressure", icon: "fa-solid fa-gauge-high" },
+];
+
+const details = `
+<p class="mb-4">Running out of fuel shouldn't shut down your operation. <strong>Truck Tire Service On The Go</strong> delivers diesel and gasoline directly to your truck, trailer, or job site so you don't waste time driving to a fuel station.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call With Your Location</h3>
+<p class="mb-4">Tell us where you are, what fuel you need (diesel or gas), and approximately how much. We give you a price and dispatch immediately.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. We Bring Fuel to You</h3>
+<p class="mb-4">Our service vehicle arrives at your location with the fuel you need. No need to unhook trailers, move equipment, or waste time at a gas station.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Fill Up and Get Moving</h3>
+<p>We fuel you up on the spot. Simple, fast, and you're back on the road or back to work without losing more time.</p>
+`;
+---
+
+<ServicePage
+  title="Emergency Fuel Delivery | Diesel & Gas | 24/7 Service | Truck Tire Service On The Go"
+  description="24/7 diesel and gasoline delivery for trucks and job sites in the tri-state area. Fast 30-min response. No tow needed. Call (347) 668-5874."
+  headline='Emergency <span class="text-brand-red">Fuel Delivery</span>'
+  subheadline="Ran out of diesel or gas? We deliver fuel directly to your truck or job site — 24/7. No need to move your vehicle or unhook your trailer."
+  heroIcon="fa-solid fa-gas-pump"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

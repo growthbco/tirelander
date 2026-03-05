@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "Safe, damage-free entry for commercial truck cabs and vehicles",
+  "Experienced with all major truck lock systems and door mechanisms",
+  "No damage to your vehicle — we use professional lockout tools",
+  "Available 24/7 for emergency lockouts day or night",
+  "30-minute response time across the tri-state area",
+  "No membership or contract — just call when you need us",
+];
+
+const faqs = [
+  { q: "Can you unlock a semi-truck cab?", a: "Yes. Our technicians are experienced with all types of commercial truck cabs including Freightliner, Peterbilt, Kenworth, Volvo, International, and more." },
+  { q: "Will you damage my truck getting in?", a: "No. We use professional lockout tools designed for damage-free entry. We treat your truck like it's our own." },
+  { q: "How fast can you get to me?", a: "We typically arrive within 30 minutes in our primary service area. Call us and we'll give you an exact ETA." },
+  { q: "What if my keys are broken in the lock?", a: "We can extract broken keys and get your door open. For ignition issues, we'll help you figure out next steps." },
+  { q: "How much does a lockout service call cost?", a: "Call (347) 668-5874 for pricing. We give you the cost upfront before we dispatch — no surprises." },
+];
+
+const relatedServices = [
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Battery Delivery", href: "/services/battery-delivery", icon: "fa-solid fa-car-battery" },
+  { name: "Jump Starts", href: "/services/jump-starts", icon: "fa-solid fa-bolt" },
+  { name: "Fuel Delivery", href: "/services/fuel-delivery", icon: "fa-solid fa-gas-pump" },
+];
+
+const details = `
+<p class="mb-4">Locked out of your truck cab at 2am? Keys stuck in the ignition? <strong>Truck Tire Service On The Go</strong> provides fast, damage-free lockout service for commercial trucks and vehicles across the tri-state area.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call and Tell Us Your Situation</h3>
+<p class="mb-4">Let us know your truck type, where you're located, and the nature of the lockout. We dispatch a technician with professional lockout tools immediately.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. Damage-Free Entry</h3>
+<p class="mb-4">Our technician uses professional-grade tools to gain entry without damaging your door, lock, or window. We're experienced with all major commercial truck brands.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Back Behind the Wheel</h3>
+<p>Once we get you in, we make sure you're good to go. The whole process typically takes just minutes once we're on-site.</p>
+`;
+---
+
+<ServicePage
+  title="Truck Lockout Service | 24/7 Emergency | Damage-Free | Truck Tire Service On The Go"
+  description="24/7 commercial truck lockout service in the tri-state area. Damage-free entry for all truck brands. 30-min response. Call (347) 668-5874."
+  headline='Emergency <span class="text-brand-red">Lockout</span> Service'
+  subheadline="Locked out of your cab? We provide fast, damage-free entry for commercial trucks and vehicles — 24/7. No membership required, no damage to your truck."
+  heroIcon="fa-solid fa-key"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

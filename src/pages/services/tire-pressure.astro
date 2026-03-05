@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "On-site tire pressure checks and adjustments for commercial vehicles",
+  "Proper inflation improves fuel efficiency and extends tire life",
+  "Prevents blowouts caused by under- or over-inflation",
+  "Service for all commercial trucks, trailers, and heavy equipment",
+  "Available 24/7 with fast response times",
+  "Serving the entire tri-state area within a 250-mile radius",
+];
+
+const faqs = [
+  { q: "Why does tire pressure matter for commercial trucks?", a: "Improper tire pressure is one of the leading causes of blowouts and premature tire wear on commercial vehicles. It also significantly impacts fuel efficiency — under-inflated tires can increase fuel costs by up to 3%." },
+  { q: "Can you check pressure on a full trailer?", a: "Yes. We check and adjust pressure on all tires including dual setups, trailer tires, and steer tires." },
+  { q: "Do you carry air equipment for on-site inflation?", a: "Yes. Our service trucks are equipped with commercial air compressors that can handle any tire size." },
+  { q: "How often should commercial truck tires be checked?", a: "Industry best practice is to check tire pressure before every trip or at minimum once a week. Consistent pressure checks prevent costly blowouts and improve fuel economy." },
+  { q: "What does this service cost?", a: "Call (347) 668-5874 for pricing. Tire pressure service is one of our most affordable offerings and can save you significant money on fuel and tire replacement costs." },
+];
+
+const relatedServices = [
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Tire Repair & Patching", href: "/services/tire-repair", icon: "fa-solid fa-wrench" },
+  { name: "Heavy Equipment Tires", href: "/services/heavy-equipment-tires", icon: "fa-solid fa-gears" },
+  { name: "Fuel Delivery", href: "/services/fuel-delivery", icon: "fa-solid fa-gas-pump" },
+];
+
+const details = `
+<p class="mb-4">Proper tire pressure isn't just about safety — it directly impacts your fuel costs, tire lifespan, and load handling. <strong>Truck Tire Service On The Go</strong> provides mobile tire pressure service for commercial trucks and equipment.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call For a Pressure Check</h3>
+<p class="mb-4">Whether you've noticed a soft tire or want a routine check across your fleet, call us and we'll come to your location with commercial air equipment.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. Full Inspection and Adjustment</h3>
+<p class="mb-4">We check every tire — steers, drives, and trailer tires — and adjust to manufacturer-recommended PSI for your load type. We also visually inspect for damage, uneven wear, and potential issues.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Prevent Problems Before They Happen</h3>
+<p>Consistent tire pressure maintenance prevents blowouts, reduces fuel costs, and extends tire life. It's one of the simplest ways to protect your investment and keep your trucks running safely.</p>
+`;
+---
+
+<ServicePage
+  title="Commercial Tire Pressure Service | On-Site Inflation & Checks | Truck Tire Service On The Go"
+  description="Mobile tire pressure checks and inflation for commercial trucks and equipment. Prevent blowouts, improve fuel efficiency. 24/7 tri-state area service. Call (347) 668-5874."
+  headline='Tire <span class="text-brand-red">Pressure</span> Service'
+  subheadline="Low tire pressure costs you fuel, tire life, and safety. We provide on-site pressure checks and inflation for all commercial vehicles and heavy equipment — keeping your fleet running right."
+  heroIcon="fa-solid fa-gauge-high"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "Specialized tire service for bobcats, backhoe loaders, skid steers, and caterpillar machines",
+  "We come directly to your construction or job site — no need to transport equipment",
+  "Technicians experienced with industrial and off-road tire systems",
+  "Available 24/7 so your project stays on schedule",
+  "Carry common heavy equipment tire sizes on our service trucks",
+  "Serving construction sites across NY, NJ, and the tri-state area",
+];
+
+const faqs = [
+  { q: "What heavy equipment do you service?", a: "We handle tires for bobcats, skid steers, backhoe loaders, caterpillar machines, excavators, forklifts, and most other construction and industrial equipment." },
+  { q: "Can you come to my construction site?", a: "Absolutely. We come directly to your job site — that's what we do. No need to transport heavy equipment to a shop." },
+  { q: "Do you carry heavy equipment tires?", a: "We stock the most common sizes. For specialized equipment, call us and we'll source the right tire and have it on-site as fast as possible." },
+  { q: "How quickly can you get to my site?", a: "We typically arrive within 30 minutes for locations in our primary service area. For sites further out, we'll give you an ETA when you call." },
+  { q: "Do you do repairs or only full replacements?", a: "We do both. If a repair can get you through the job safely, we'll do that. If you need a full replacement, we handle it on-site." },
+];
+
+const relatedServices = [
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Tire Repair & Patching", href: "/services/tire-repair", icon: "fa-solid fa-wrench" },
+  { name: "Jump Starts", href: "/services/jump-starts", icon: "fa-solid fa-bolt" },
+  { name: "Battery Delivery", href: "/services/battery-delivery", icon: "fa-solid fa-car-battery" },
+];
+
+const details = `
+<p class="mb-4">A flat tire on a bobcat or backhoe doesn't just slow down one machine — it can shut down your entire operation. <strong>Truck Tire Service On The Go</strong> provides mobile heavy equipment tire service directly at your job site.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call With Your Equipment Details</h3>
+<p class="mb-4">Tell us what machine needs service, the tire size if you have it, and your job site location. We'll confirm availability and dispatch immediately.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. On-Site Service at Your Job Site</h3>
+<p class="mb-4">Our crews arrive with the heavy-duty jacks, tools, and tires needed for industrial equipment. We work around your schedule and your site conditions.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Minimize Downtime, Maximize Productivity</h3>
+<p>We get your equipment back in operation as fast as possible so your crew isn't standing around and your project stays on track.</p>
+`;
+---
+
+<ServicePage
+  title="Heavy Equipment Tire Service | Bobcat, Skid Steer, Backhoe | Truck Tire Service On The Go"
+  description="Mobile tire service for heavy equipment — bobcats, skid steers, backhoe loaders, caterpillar machines. On-site at your job site 24/7 in the tri-state area. Call (347) 668-5874."
+  headline='Heavy <span class="text-brand-red">Equipment Tire</span> Service'
+  subheadline="Bobcat down? Skid steer flat? We bring mobile tire service directly to your construction site. Specialized service for backhoe loaders, caterpillar equipment, and all heavy machinery."
+  heroIcon="fa-solid fa-gears"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

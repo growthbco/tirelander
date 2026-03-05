@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "Commercial-grade battery delivery and installation for trucks and heavy equipment",
+  "We test your old battery and install the new one on-site",
+  "Carry batteries for most commercial truck and equipment applications",
+  "24/7 availability — dead batteries don't wait for business hours",
+  "No markup surprises — we quote the price before we roll",
+  "Fast 30-minute response across the tri-state area",
+];
+
+const faqs = [
+  { q: "Do you carry truck batteries on your service vehicle?", a: "Yes, we carry the most common commercial truck and equipment battery sizes. For specialized batteries, we can source and deliver them quickly." },
+  { q: "Do you install the battery or just deliver it?", a: "We do both. We deliver the battery, remove your old one, install the new one, and test to make sure everything is running properly." },
+  { q: "How much does a commercial truck battery cost?", a: "Pricing depends on the battery type and size. Call us at (347) 668-5874 for an immediate quote — we give you the full price upfront, no hidden fees." },
+  { q: "Can you jump start my truck first to see if the battery is the problem?", a: "Absolutely. We test and diagnose before recommending a replacement. If a jump start gets you going, that's what we'll do." },
+  { q: "What areas do you cover?", a: "We serve the entire tri-state area — New York, New Jersey, Brooklyn, Staten Island, Long Island, New Rochelle, Stamford, and anywhere within a 250-mile radius." },
+];
+
+const relatedServices = [
+  { name: "Jump Starts", href: "/services/jump-starts", icon: "fa-solid fa-bolt" },
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Fuel Delivery", href: "/services/fuel-delivery", icon: "fa-solid fa-gas-pump" },
+  { name: "Lockout Service", href: "/services/lockout-service", icon: "fa-solid fa-key" },
+];
+
+const details = `
+<p class="mb-4">A dead battery on a commercial truck or piece of heavy equipment can bring your whole operation to a halt. <strong>Truck Tire Service On The Go</strong> delivers and installs batteries on-site so you don't have to tow or transport anything.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call and Describe the Problem</h3>
+<p class="mb-4">Tell us your vehicle or equipment type and we'll bring the right battery. If you're not sure whether it's the battery, we'll diagnose it on-site.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. We Deliver and Install On-Site</h3>
+<p class="mb-4">Our technician arrives with the battery, removes the old one, installs the new one, and tests your electrical system to confirm everything is working.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. You're Back in Business</h3>
+<p>No towing, no shop visit, no waiting. We handle everything at your location so you can get back to work immediately.</p>
+`;
+---
+
+<ServicePage
+  title="Commercial Battery Delivery & Install | 24/7 Mobile Service | Truck Tire Service On The Go"
+  description="24/7 commercial battery delivery and installation for trucks and heavy equipment in the tri-state area. On-site service, 30-min response. Call (347) 668-5874."
+  headline='Battery <span class="text-brand-red">Delivery &amp; Install</span>'
+  subheadline="Dead battery killing your schedule? We deliver and install commercial-grade truck and equipment batteries on-site. No tow needed — we come to you 24/7."
+  heroIcon="fa-solid fa-car-battery"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

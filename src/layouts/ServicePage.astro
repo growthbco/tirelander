@@ -1,0 +1,299 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  headline: string;
+  subheadline: string;
+  heroIcon: string;
+  benefits: string[];
+  details: string;
+  faqs: { q: string; a: string }[];
+  relatedServices: { name: string; href: string; icon: string }[];
+}
+
+const {
+  title,
+  description,
+  headline,
+  subheadline,
+  heroIcon,
+  benefits,
+  details,
+  faqs,
+  relatedServices,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#ED1C24',
+                dark: '#0F172A',
+                gray: '#F3F4F6',
+                accent: '#FFD700'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script is:inline>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <style is:global>
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      ::-webkit-scrollbar-thumb { background: #ED1C24; border-radius: 4px; }
+      .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+      button, a { -webkit-tap-highlight-color: transparent; }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-slate-800 bg-white">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 sm:h-20">
+          <a href="/" class="flex items-center gap-2 sm:gap-3">
+            <div class="bg-brand-red text-white p-1.5 sm:p-2 rounded-lg">
+              <i class="fa-solid fa-truck-fast text-xl sm:text-2xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display font-black text-sm sm:text-xl uppercase leading-none text-brand-dark tracking-tighter">Truck Tire Service</span>
+              <span class="text-brand-red font-bold text-[10px] sm:text-sm uppercase tracking-widest">On The Go</span>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="/#services" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">All Services</a>
+            <a href="tel:+13476685874" class="text-brand-red font-black text-xl hover:text-red-700 transition-colors">
+              <i class="fa-solid fa-phone mr-2"></i>(347) 668-5874
+            </a>
+            <a href="tel:+13476685874" class="bg-brand-red hover:bg-red-700 text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-red-500/30 transition-all hover:-translate-y-0.5">
+              Get Help Now
+            </a>
+          </div>
+          <a href="tel:+13476685874" class="md:hidden bg-brand-red text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> Call Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero: Above the Fold — Headline + CTA visible immediately -->
+    <section class="relative pt-16 sm:pt-20 bg-gradient-to-br from-brand-dark via-slate-900 to-slate-800 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div class="space-y-5 sm:space-y-6">
+            <!-- Trust badge -->
+            <div class="inline-flex items-center gap-2 bg-brand-red/90 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider border border-red-400/30">
+              <i class="fa-solid fa-clock"></i> On Site in 30 Min or Less
+            </div>
+
+            <h1 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase leading-[1.1]" set:html={headline} />
+
+            <p class="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed">{subheadline}</p>
+
+            <!-- Trust signals row -->
+            <div class="flex flex-wrap gap-4 sm:gap-6 py-2">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-red text-lg"></i>
+                <span class="text-sm font-semibold text-slate-300">Licensed & Insured</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-clock text-brand-red text-lg"></i>
+                <span class="text-sm font-semibold text-slate-300">24/7 Service</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="flex text-yellow-400 text-xs gap-0.5">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm font-semibold text-slate-300">5-Star Rated</span>
+              </div>
+            </div>
+
+            <!-- Primary CTA -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="tel:+13476685874" class="bg-brand-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-black text-lg shadow-xl shadow-red-600/30 transition-all hover:-translate-y-1 text-center flex items-center justify-center gap-3 uppercase tracking-wide min-h-[56px]">
+                <i class="fa-solid fa-phone-volume animate-pulse"></i> Call (347) 668-5874
+              </a>
+              <a href="/#services" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all text-center uppercase tracking-wide min-h-[56px] flex items-center justify-center">
+                All Services
+              </a>
+            </div>
+          </div>
+
+          <!-- Icon visual -->
+          <div class="hidden lg:flex justify-center">
+            <div class="relative w-64 h-64 bg-brand-red/10 rounded-full flex items-center justify-center border-4 border-brand-red/20">
+              <div class="bg-brand-red rounded-full h-48 w-48 flex flex-col items-center justify-center shadow-2xl shadow-red-600/30">
+                <i class={`${heroIcon} text-5xl text-white mb-3`}></i>
+                <div class="font-display font-black text-white text-xl uppercase text-center px-4">24/7<br/>Service</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage bar -->
+      <div class="bg-brand-red/90 py-3 sm:py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-white text-xs sm:text-sm font-semibold uppercase tracking-wide">
+            <span><i class="fa-solid fa-location-dot mr-1"></i> New York</span>
+            <span><i class="fa-solid fa-location-dot mr-1"></i> New Jersey</span>
+            <span><i class="fa-solid fa-location-dot mr-1"></i> Brooklyn</span>
+            <span><i class="fa-solid fa-location-dot mr-1"></i> Staten Island</span>
+            <span><i class="fa-solid fa-location-dot mr-1"></i> Long Island</span>
+            <span class="hidden sm:inline"><i class="fa-solid fa-location-dot mr-1"></i> New Rochelle</span>
+            <span class="hidden sm:inline"><i class="fa-solid fa-location-dot mr-1"></i> Stamford</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits / Why Choose Us -->
+    <section class="py-12 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 sm:mb-14">
+          <span class="text-brand-red font-bold tracking-widest uppercase text-xs sm:text-sm">Why Choose Us</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl mt-2 text-brand-dark uppercase">What You Get</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {benefits.map((benefit, i) => (
+            <div class="flex items-start gap-4 bg-slate-50 rounded-xl p-5 sm:p-6 border border-slate-100">
+              <div class="flex-shrink-0 w-10 h-10 bg-brand-red/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+              </div>
+              <p class="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Content -->
+    <section class="py-12 sm:py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-100">
+          <h2 class="font-display font-black text-2xl sm:text-3xl text-brand-dark uppercase mb-6">How It Works</h2>
+          <div class="prose prose-slate max-w-none text-sm sm:text-base leading-relaxed" set:html={details} />
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Urgency -->
+    <section class="py-10 sm:py-16 bg-brand-red text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="grid sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
+          <div>
+            <div class="font-display font-black text-4xl sm:text-5xl">30</div>
+            <div class="text-sm sm:text-base font-semibold text-white/90 uppercase tracking-wide">Min Response</div>
+          </div>
+          <div>
+            <div class="font-display font-black text-4xl sm:text-5xl">250</div>
+            <div class="text-sm sm:text-base font-semibold text-white/90 uppercase tracking-wide">Mile Radius</div>
+          </div>
+          <div>
+            <div class="font-display font-black text-4xl sm:text-5xl">24/7</div>
+            <div class="text-sm sm:text-base font-semibold text-white/90 uppercase tracking-wide">Availability</div>
+          </div>
+        </div>
+        <a href="tel:+13476685874" class="bg-white text-brand-red hover:bg-slate-100 px-8 py-4 rounded-lg font-black text-lg uppercase shadow-xl transition-transform hover:scale-105 inline-flex items-center gap-3 min-h-[56px]">
+          <i class="fa-solid fa-phone-volume"></i> Call Now — (347) 668-5874
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ Section (helps Quality Score + user intent) -->
+    <section class="py-12 sm:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display font-black text-2xl sm:text-3xl text-brand-dark uppercase text-center mb-8 sm:mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="group bg-slate-50 rounded-xl border border-slate-100 overflow-hidden">
+              <summary class="flex items-center justify-between cursor-pointer p-5 sm:p-6 font-bold text-sm sm:text-base text-slate-800 list-none">
+                <span>{faq.q}</span>
+                <i class="fa-solid fa-chevron-down text-brand-red text-sm transition-transform group-open:rotate-180"></i>
+              </summary>
+              <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="py-12 sm:py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display font-black text-xl sm:text-2xl text-brand-dark uppercase text-center mb-6 sm:mb-8">Other Services</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          {relatedServices.map((svc) => (
+            <a href={svc.href} class="bg-white rounded-xl p-4 sm:p-5 text-center hover:shadow-lg hover:border-brand-red/30 border border-slate-100 transition-all group">
+              <i class={`${svc.icon} text-2xl text-brand-red mb-2 group-hover:scale-110 transition-transform inline-block`}></i>
+              <p class="font-display font-bold text-xs sm:text-sm uppercase text-slate-700">{svc.name}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-12 sm:py-16 bg-brand-dark text-white text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl uppercase mb-4">Don't Wait on the Road</h2>
+        <p class="text-slate-400 text-base sm:text-lg mb-6 sm:mb-8">Call now and we'll dispatch a crew to your location immediately. No membership, no hassle.</p>
+        <a href="tel:+13476685874" class="bg-brand-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-black text-lg uppercase shadow-xl shadow-red-600/30 transition-all hover:-translate-y-1 inline-flex items-center gap-3 min-h-[56px]">
+          <i class="fa-solid fa-phone-volume animate-pulse"></i> (347) 668-5874
+        </a>
+      </div>
+    </section>
+
+    <!-- Mini Footer -->
+    <footer class="bg-slate-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-brand-red text-white p-1.5 rounded-lg">
+              <i class="fa-solid fa-truck-fast text-lg"></i>
+            </div>
+            <div>
+              <span class="font-display font-black text-sm uppercase">Truck Tire Service</span>
+              <span class="text-brand-red font-bold text-xs uppercase tracking-widest ml-1">On The Go</span>
+            </div>
+          </div>
+          <p class="text-slate-500 text-xs">&copy; 2025 Truck Tire Service On The Go. All rights reserved.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors text-sm" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-brand-red transition-colors text-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-t border-white/10 p-3 sm:hidden">
+      <a href="tel:+13476685874" class="flex items-center justify-center gap-3 bg-brand-red hover:bg-red-700 text-white py-3.5 rounded-xl font-black text-lg uppercase tracking-wide shadow-lg shadow-red-600/30 min-h-[52px]">
+        <i class="fa-solid fa-phone-volume animate-pulse"></i> Call (347) 668-5874
+      </a>
+    </div>
+
+  </body>
+</html>

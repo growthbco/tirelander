@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "Heavy-duty jump start service for commercial trucks and equipment",
+  "Industrial-grade power units that can start any engine size",
+  "Battery testing on-site to determine if you need a jump or a replacement",
+  "Available 24/7 — we handle middle-of-the-night calls",
+  "30-minute response time across the tri-state area",
+  "No membership or contract required — just call",
+];
+
+const faqs = [
+  { q: "Can you jump start a semi-truck or heavy equipment?", a: "Yes. We carry industrial-grade jump packs and booster equipment that can handle any commercial truck or heavy equipment engine." },
+  { q: "What if the battery needs to be replaced?", a: "We test your battery on-site. If it needs replacement, we can often deliver and install a new one right there — no second trip needed." },
+  { q: "How much does a jump start cost?", a: "Call us at (347) 668-5874 for pricing. We give you the cost upfront before dispatching so there are no surprises." },
+  { q: "What if my truck won't start even after a jump?", a: "Our technicians can diagnose common starting issues on-site. If it's something beyond a battery issue, we'll help you figure out next steps." },
+  { q: "How fast can you get to me?", a: "We typically arrive within 30 minutes in our primary service area. When you call, we give you an exact ETA." },
+];
+
+const relatedServices = [
+  { name: "Battery Delivery", href: "/services/battery-delivery", icon: "fa-solid fa-car-battery" },
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Fuel Delivery", href: "/services/fuel-delivery", icon: "fa-solid fa-gas-pump" },
+  { name: "Lockout Service", href: "/services/lockout-service", icon: "fa-solid fa-key" },
+];
+
+const details = `
+<p class="mb-4">A dead battery on a commercial truck or piece of heavy equipment means lost time and lost money. <strong>Truck Tire Service On The Go</strong> provides heavy-duty jump start service that can handle any engine — from box trucks to caterpillar machines.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call and Tell Us What Won't Start</h3>
+<p class="mb-4">Let us know your vehicle or equipment type and location. We'll dispatch a technician with industrial-grade jump equipment immediately.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. We Arrive and Diagnose</h3>
+<p class="mb-4">Our technician tests your battery and electrical connections to confirm a jump start will solve the problem. If you need a new battery, we can often install one on the spot.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Start Up and Go</h3>
+<p>Once your engine is running, we verify everything is charging properly so you don't get stranded again down the road.</p>
+`;
+---
+
+<ServicePage
+  title="Heavy-Duty Jump Start Service | 24/7 Commercial Trucks | Truck Tire Service On The Go"
+  description="24/7 heavy-duty jump start service for commercial trucks and equipment in the tri-state area. Industrial-grade power, 30-min response. Call (347) 668-5874."
+  headline='Heavy-Duty <span class="text-brand-red">Jump Start</span> Service'
+  subheadline="Truck won't start? We bring industrial-grade jump equipment that can handle any commercial engine — semi-trucks, dump trucks, heavy equipment. 24/7 service, 30-minute response."
+  heroIcon="fa-solid fa-bolt"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>

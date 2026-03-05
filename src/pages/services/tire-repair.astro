@@ -1,0 +1,52 @@
+---
+import ServicePage from "../../layouts/ServicePage.astro";
+
+const benefits = [
+  "On-site puncture repairs and patching for commercial tires",
+  "Save money — a repair costs a fraction of a full replacement",
+  "Professional assessment to determine if a repair or replacement is needed",
+  "Heavy-duty patches and plugs rated for commercial loads",
+  "Available 24/7 with 30-minute response times",
+  "Serving trucks and heavy equipment across the tri-state area",
+];
+
+const faqs = [
+  { q: "Can a commercial truck tire be repaired?", a: "In many cases, yes. Punctures in the tread area can often be safely repaired with a commercial-grade plug and patch. We assess every tire on-site and only recommend repair when it's safe." },
+  { q: "How long does a tire repair take?", a: "Most on-site repairs take 30-45 minutes. It's significantly faster than sourcing and mounting a full replacement tire." },
+  { q: "Is a repaired tire safe for highway use?", a: "When done correctly with commercial-grade materials, a properly repaired tire is safe for continued use. We follow industry standards for all repairs." },
+  { q: "What if the tire can't be repaired?", a: "If the damage is too severe for a safe repair, we'll let you know and can often provide a replacement tire on the same service call." },
+  { q: "How much does a tire repair cost vs. replacement?", a: "A repair typically costs a fraction of a new tire. Call (347) 668-5874 for an exact quote based on your tire size and damage." },
+];
+
+const relatedServices = [
+  { name: "Commercial Truck Tires", href: "/services/commercial-truck-tires", icon: "fa-solid fa-truck-monster" },
+  { name: "Heavy Equipment Tires", href: "/services/heavy-equipment-tires", icon: "fa-solid fa-gears" },
+  { name: "Tire Pressure Service", href: "/services/tire-pressure", icon: "fa-solid fa-gauge-high" },
+  { name: "Battery Delivery", href: "/services/battery-delivery", icon: "fa-solid fa-car-battery" },
+];
+
+const details = `
+<p class="mb-4">Not every flat tire needs a full replacement. <strong>Truck Tire Service On The Go</strong> provides professional on-site tire repair and patching for commercial trucks and heavy equipment — saving you time and money.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">1. Call and Describe the Damage</h3>
+<p class="mb-4">Tell us about the tire issue — puncture, slow leak, or visible damage. We'll bring the tools and materials for both repair and replacement, so we're prepared either way.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">2. On-Site Assessment</h3>
+<p class="mb-4">Our technician inspects the tire to determine if a repair is safe and appropriate. We'll give you an honest recommendation — we never upsell a replacement when a repair will do.</p>
+
+<h3 class="font-display font-bold text-lg uppercase text-brand-dark mt-6 mb-3">3. Professional Repair or Replacement</h3>
+<p>If repairable, we use commercial-grade plugs and patches rated for heavy loads. If not, we can mount a replacement on the spot. Either way, you're back in operation fast.</p>
+`;
+---
+
+<ServicePage
+  title="Commercial Tire Repair & Patching | On-Site Service | Truck Tire Service On The Go"
+  description="On-site commercial tire repair and patching for trucks and heavy equipment in the tri-state area. Save money vs. full replacement. 24/7 service. Call (347) 668-5874."
+  headline='Tire <span class="text-brand-red">Repair &amp; Patching</span>'
+  subheadline="Puncture or slow leak? Don't replace what can be repaired. We provide on-site commercial tire repair and patching — saving you money while keeping you safe on the road."
+  heroIcon="fa-solid fa-wrench"
+  benefits={benefits}
+  details={details}
+  faqs={faqs}
+  relatedServices={relatedServices}
+/>
