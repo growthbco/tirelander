@@ -1,8 +1,3 @@
 [build]
-  command = "rm -rf .netlify && npm run build"
+  command = "npm run build"
   publish = "dist"
-
-[[redirects]]
-  from = "/thank-you"
-  to = "/thank-you/index.html"
-  status = 200
