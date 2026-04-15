@@ -20,6 +20,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- Desktop Nav & CTA -->
         <div class="hidden md:flex items-center gap-8">
           <nav class="flex items-center gap-6">
+            <a href="#hero" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Home</a>
             <a href="#services" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Services</a>
             <a href="#equipment" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Equipment</a>
             <a href="#testimonials" class="text-slate-600 hover:text-brand-red font-semibold text-sm uppercase tracking-wide transition-colors">Reviews</a>
@@ -56,6 +57,7 @@ import Layout from "../layouts/Layout.astro";
       </button>
     </div>
     <nav class="flex flex-col items-center justify-center flex-1 gap-6">
+      <a href="#hero" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Home</a>
       <a href="#services" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Services</a>
       <a href="#equipment" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Equipment</a>
       <a href="#testimonials" class="mobile-nav-link text-white font-display font-bold text-2xl uppercase tracking-wide hover:text-brand-red transition-colors">Reviews</a>
@@ -72,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40 sm:to-transparent z-10"></div>
-      <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/51b799ee5c-18e78048f8d4e409ca47.png" alt="Commercial truck tire being changed on the roadside by a professional mechanic" />
+      <img class="w-full h-full object-cover" src="/Images/onsite-tire-repair.png" alt="Technician repairing a commercial truck tire on the roadside" />
     </div>
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-0">
       <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -314,6 +316,47 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- Work Gallery -->
+  <section class="py-12 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 sm:mb-14">
+        <span class="text-brand-red font-bold tracking-widest uppercase text-xs sm:text-sm">Real Jobs, Real Results</span>
+        <h2 class="font-display font-black text-2xl sm:text-4xl lg:text-5xl mt-2 mb-4 text-brand-dark uppercase">See Us In Action</h2>
+        <div class="h-1.5 w-24 bg-brand-red mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
+        <div class="relative group overflow-hidden rounded-xl col-span-2 aspect-[16/9] lg:col-span-2 lg:row-span-2 lg:aspect-auto">
+          <img src="/Images/truck-tire-service.png" alt="Technician servicing a semi-truck tire on site" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white font-bold text-sm sm:text-base uppercase">On-Site Tire Replacement</p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl aspect-[4/3]">
+          <img src="/Images/onsite-tire-repair.png" alt="Technician repairing a truck tire next to service vehicle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white font-bold text-xs sm:text-sm uppercase">Emergency Tire Repair</p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl aspect-[4/3]">
+          <img src="/Images/mobile-service-truck.png" alt="Fully equipped mobile tire service truck" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white font-bold text-xs sm:text-sm uppercase">Fully Equipped Service Truck</p>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl col-span-2 aspect-[16/9] lg:aspect-[16/7]">
+          <img src="/Images/roadside-tire-change.png" alt="Roadside tire change service for semi-trailer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p class="text-white font-bold text-sm sm:text-base uppercase">Roadside Assistance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Emergency CTA Strip -->
   <section id="emergency-cta" class="bg-brand-red relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
@@ -333,7 +376,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="relative h-48 sm:h-64 lg:h-full min-h-[300px] lg:min-h-[400px]">
         <div class="absolute inset-0 lg:-ml-20 bg-brand-red lg:skew-x-[-12deg] z-0 hidden lg:block"></div>
         <div class="absolute inset-0 w-full h-full lg:clip-slant">
-          <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4169bd7689-b92b8749ac1159cebc91.png" alt="Truck tire service team working on a commercial vehicle at night" />
+          <img class="w-full h-full object-cover" src="/Images/roadside-tire-change.png" alt="Roadside truck tire service with service vehicle next to semi-trailer" />
           <div class="absolute inset-0 bg-gradient-to-t from-brand-red/50 to-transparent lg:hidden"></div>
         </div>
       </div>
